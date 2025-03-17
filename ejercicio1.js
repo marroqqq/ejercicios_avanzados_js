@@ -20,3 +20,13 @@ const movies = [
     categories: ['comedia', 'aventura', 'animación']
   }
 ]
+
+let categorias = []
+for (const element of movies) {
+  for (let i = 0; i < element.categories.length; i++) {
+    if (!categorias.includes(element.categories[i])) {
+      categorias.push(element.categories[i])
+    }
+  }
+}
+console.log(categorias)
